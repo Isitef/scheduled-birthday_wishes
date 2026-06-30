@@ -2,6 +2,7 @@ from datetime import datetime
 import pandas
 import random
 import smtplib
+import os
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
