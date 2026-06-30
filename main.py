@@ -6,8 +6,8 @@ import smtplib
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
-MY_EMAIL = "leesukij@gmail.com"
-MY_PASSWORD = "sfyrejfepcrfeons"
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 data = pandas.read_csv("birthdays.csv")
 birthdays_dict = {(data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
